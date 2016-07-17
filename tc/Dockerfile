@@ -49,6 +49,7 @@ RUN apt-get install -qq -y oracle-java7-installer 2> /dev/null
 ENV TOMCAT_VERSION_MAJOR 7
 ENV TOMCAT_VERSION_FULL  7.0.57
 
+#kick the build
 # Download and install tomcat
 RUN curl -kLO https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_VERSION_MAJOR}/v${TOMCAT_VERSION_FULL}/bin/apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz &&\
     tar -xzf apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz -C /opt &&\
